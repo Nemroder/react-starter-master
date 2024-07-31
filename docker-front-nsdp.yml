@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+# ? Servicio del contingencia-front
+  front-inventario:
+    build:
+      context: ./angular
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4201:4200"
+    volumes:
+      - ./angular:/home/app
